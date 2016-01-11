@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="ws-monitor-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ws_monitor_ear_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ws-monitor-ear/javaeeApplication/javaEEApplication" />
+      <element id="archive" name="ws-monitor-controller.jar">
+        <element id="module-output" name="ws-monitor-controller" />
+        <element id="javaee-facet-resources" facet="ws-monitor-controller/ejb/EJB" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="archive" name="ws-monitor-war.war">
+        <element id="artifact" artifact-name="ws-monitor-war:war exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="JPA 2.0-2.0" />
+        <element id="file-copy" path="$USER_HOME$/Desktop/Херь/Diplom/json-20090211.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

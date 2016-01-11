@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.ibm.ws.admin.client_8.5.0">
+    <CLASSES>
+      <root url="jar://D:/IBM/WebSphere/AppServer/runtimes/com.ibm.ws.admin.client_8.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

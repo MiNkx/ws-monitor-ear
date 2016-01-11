@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <servlet>
+        <servlet-name>REST</servlet-name>
+        <servlet-class>com.ibm.websphere.jaxrs.server.IBMRestServlet</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>ru.sbrf.rest.RestFulServiceConfig</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>REST</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <security-role id="admin" >
+        <description>Admin role for accessing application</description>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role id="everyone" >
+        <description>Admin role for accessing application</description>
+        <role-name>everyone</role-name>
+    </security-role>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Securing ALL pages</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Exception for login, index and errors</web-resource-name>
+            <url-pattern>/login.html</url-pattern>
+            <url-pattern>/index.jsp</url-pattern>
+            <url-pattern>/errors/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>everyone</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config id="FormLoginConfig_1">
+            <form-login-page>/login.html</form-login-page>
+            <form-error-page>/login.html</form-error-page>
+        </form-login-config>
+    </login-config>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/errors/403.html</location>
+    </error-page>
+</web-app>

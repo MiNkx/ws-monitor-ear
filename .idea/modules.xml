@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ws-monitor-controller/ws-monitor-controller.iml" filepath="$PROJECT_DIR$/ws-monitor-controller/ws-monitor-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ws-monitor-ear.iml" filepath="$PROJECT_DIR$/ws-monitor-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ws-monitor-war/ws-monitor-war.iml" filepath="$PROJECT_DIR$/ws-monitor-war/ws-monitor-war.iml" />
+    </modules>
+  </component>
+</project>

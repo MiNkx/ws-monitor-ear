@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Oracle - @localhost" uuid="91ed9314-620e-48d3-a861-f4b0fc75a5ab">
+    <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#xa;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="ORACLE" format-version="2.2">
+      <schema id="1" name="MONITOR">
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.18:25:45</modified-timestamp>
+        <introspection-timestamp>2016-01-07.18:29:38</introspection-timestamp>
+      </schema>
+      <table id="2" parent="1" name="SERV">
+        <object-id>93398</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="3" parent="1" name="USERS">
+        <object-id>93396</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="4" parent="1" name="USERSERVERS">
+        <object-id>93416</object-id>
+        <created-timestamp>2016-01-07.18:25:45</created-timestamp>
+        <modified-timestamp>2016-01-07.18:25:45</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="5" parent="1" name="USERV">
+        <object-id>93400</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <column id="6" parent="2" name="SERV_ID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <column id="7" parent="2" name="HOST">
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <column id="8" parent="2" name="PORT">
+        <data-type>NUMBER(*)</data-type>
+      </column>
+      <index id="9" parent="2" name="SYS_C0010356">
+        <name-surrogate>1</name-surrogate>
+        <object-id>93399</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>SERV_ID</columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="10" parent="2" name="SYS_C0010356">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>SERV_ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0010356</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="3" name="USER_ID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <column id="12" parent="3" name="NAME">
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <index id="13" parent="3" name="SYS_C0010354">
+        <name-surrogate>1</name-surrogate>
+        <object-id>93397</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>USER_ID</columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="14" parent="3" name="SYS_C0010354">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>USER_ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0010354</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="4" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(128)</data-type>
+      </column>
+      <column id="16" parent="4" name="NAME">
+        <data-type>VARCHAR2(128)</data-type>
+      </column>
+      <column id="17" parent="4" name="HOST">
+        <data-type>VARCHAR2(128)</data-type>
+      </column>
+      <column id="18" parent="4" name="PORT">
+        <data-type>NUMBER(*)</data-type>
+      </column>
+      <index id="19" parent="4" name="SYS_C0010363">
+        <name-surrogate>1</name-surrogate>
+        <object-id>93417</object-id>
+        <created-timestamp>2016-01-07.18:25:45</created-timestamp>
+        <modified-timestamp>2016-01-07.18:25:45</modified-timestamp>
+        <columns>ID</columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="20" parent="4" name="SYS_C0010363">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.18:25:45</modified-timestamp>
+        <columns>ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0010363</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="5" name="SERV_ID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <column id="22" parent="5" name="USER_ID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(32)</data-type>
+      </column>
+      <index id="23" parent="5" name="SYS_C0010359">
+        <name-surrogate>1</name-surrogate>
+        <object-id>93401</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>SERV_ID
+USER_ID</columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <index id="24" parent="5" name="USERV_IDX">
+        <object-id>93402</object-id>
+        <created-timestamp>2016-01-07.09:55:46</created-timestamp>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>USER_ID</columns>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="25" parent="5" name="SYS_C0010359">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>SERV_ID
+USER_ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0010359</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="26" parent="5" name="SYS_C0010360">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>SERV_ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>SERV.SYS_C0010356</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="27" parent="5" name="SYS_C0010361">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-01-07.09:55:46</modified-timestamp>
+        <columns>USER_ID</columns>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>USERS.SYS_C0010354</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
